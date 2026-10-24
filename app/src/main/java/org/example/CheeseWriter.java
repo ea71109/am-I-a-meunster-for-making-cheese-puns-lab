@@ -12,7 +12,7 @@ public class CheeseWriter {
             writer.println("Pasteurized milk cheeses: " + pasteurized);
             writer.println("Raw milk cheeses: " + raw);
             writer.println("Organic cheeses with moisture over 41%: " + organicMoisture);
-            writer.println("Most common type of cheese: " + commonMilk + " cheese");
+            writer.println("Most common type of cheese: " + commonMilk + " cheese.");
         }
         catch (IOException e)
         {
