@@ -4,11 +4,15 @@
 package org.example;
 
 public class App {
-    public String getGreeting() {
-        return "Hello World!";
-    }
-
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+        CheeseReader reader = new CheeseReader("cheese_data.csv");
+        CheeseList list = reader.readCheeses();
+
+        int pasteurizedCount = list.countPasteurized();
+        int rawCount = list.countRaw();
+        int organicHighMoisture = list.countOrganicHighMoisture();
+        String mostCommonMilk = list.findMostCommonType();
+        CheeseWriter writer = new CheeseWriter();
+        writer.printResults("output.txt", pasteurizedCount, rawCount, organicHighMoisture, mostCommonMilk);
     }
 }
